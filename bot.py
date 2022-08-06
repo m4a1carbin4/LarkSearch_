@@ -23,7 +23,10 @@ import os
 from datetime import datetime
 import pytz
 
-bot = commands.Bot(command_prefix = '!', help_command = None)
+game = discord.Game("Lost_Ark_Bot")
+bot = commands.Bot(command_prefix = '!', status=discord.Status.online, activity=game)
+
+bot.run('')
 
 # 아래는 봇이 구동되었을 때 동작하는 부분
 @bot.event
